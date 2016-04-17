@@ -55,7 +55,7 @@ ROOT_URLCONF = 'private_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS':[BASE_DIR+"/Moss_html",BASE_DIR+"/Moss_static",],
+        'DIRS':[BASE_DIR+"/Moss_html",BASE_DIR+"/Moss_static",BASE_DIR+"/Moss_templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
