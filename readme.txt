@@ -7,5 +7,10 @@
 	2.创建private_project/view_index.py
 	3.修改private_project/urls.py
 		3.1 添加from private_project.view_index import hello引入 hello方法
-		3.2 url("^", hello),在http://127.0.0.1:8000/调用hello函数，返回index.html
-	
+		3.2 url("^￥", hello),在http://127.0.0.1:8000/调用hello函数，返回index.html
+3.创建cafe界面
+	1.创建Moss_html/cafe.html
+	2.创建private_project/view_cafe.py
+	3.修改private_project/urls.py
+		3.1 添加from private_project.view_cafe import cafe
+		3.2 url("^cafe", cafe),

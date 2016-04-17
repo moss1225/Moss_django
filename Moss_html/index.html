@@ -4,18 +4,31 @@
 div{
 	width:100%;
 	text-align:center;
+	margin-top:10px;
 }
-#the{
+.black{
 	color:#000;
+}
+.green{
+	color:green;
+}
+.blue{
+	color:blue;
 }
 </style>
 </head>
 <body>
 <div>
-	<a href="https://wx.qq.com/" id="the">click me enter the WeiChat</a>
+	<a href="https://wx.qq.com/" class="blue">click me enter the WeiChat</a>
 </div>
 <div>
 {{ wx }}
+</div>
+<div>
+	<a href="/cafe" class="green" >cafe store list</a>
+</div>
+<div>
+	{{cafe}}
 </div>
 </body>
 </html>

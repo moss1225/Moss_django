@@ -16,9 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from private_project.view_index import hello
-
+from private_project.view_cafe import cafe
 
 urlpatterns = [
-    url("^", hello),
+    url(r"^$", hello),
+    url(r'^cafe/', cafe),
     url(r'^admin/', admin.site.urls),
 ]
