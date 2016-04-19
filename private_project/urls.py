@@ -18,11 +18,13 @@ from django.contrib import admin
 from private_project.view_index import hello
 from private_project.view_cafe import cafe
 from private_project.view_templates import temp1, temp2
+import appTest.models 
 
 urlpatterns = [
     url(r"^$", hello),
     url(r'^cafe/', cafe),
     url(r'^temp1/', temp1),
     url(r'^temp2/', temp2),
+    url(r'^clock/', appTest.models.appView),
     url(r'^admin/', admin.site.urls),
 ]

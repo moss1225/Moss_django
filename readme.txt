@@ -26,3 +26,14 @@
 		5.1 添加from private_project.view_templates import temp1, temp2
 		5.2 url("^temp1", temp1),
 		5.3 url("^temp2", temp2),
+		
+5.创建应用
+	1.右键点击项目private_project(not is private_project/private_project), 右键菜单中Django中点击create application, 
+	2.创建应用appTest
+	3.修改private_project/private_project
+		1.private_project/private_project中修改settings.py
+		2.settings.py中INSTALLED_APPS 添加appTest
+	4.添加页面
+		1.修改models.py, 用HttpResponse输出界面
+		2.在private_project/urls中添加import appTest.models 
+		3.在private_project/urls中添加url(r'^clock/', appTest.models.appView),
