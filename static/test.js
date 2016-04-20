@@ -1,0 +1,1 @@
+alert("it\'s success to import test.js s")

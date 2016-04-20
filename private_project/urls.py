@@ -19,12 +19,16 @@ from private_project.view_index import hello
 from private_project.view_cafe import cafe
 from private_project.view_templates import temp1, temp2
 import appTest.models 
-
+import settings
+import JSorCSS
 urlpatterns = [
     url(r"^$", hello),
     url(r'^cafe/', cafe),
     url(r'^temp1/', temp1),
     url(r'^temp2/', temp2),
     url(r'^clock/', appTest.models.appView),
+    url(r'^js/', JSorCSS.models.JS_View),
+    url(r'^css/',JSorCSS.models.CSS_View),
     url(r'^admin/', admin.site.urls),
+    url( r'^static/(?P<path>.*)$', 'django.views.static.serve',{ 'document_root': settings.STATIC_URL }),
 ]
