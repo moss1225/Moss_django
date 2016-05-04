@@ -59,3 +59,22 @@
 		-添加url( r'^static/(?P<path>.*)$', 'django.views.static.serve',{ 'document_root': settings.STATIC_URL }),
 		-目的是static中的文件用静态方式引用，而非Python文件
 		-添加url(r'^css/',JSorCSS.models.CSS_View),
+
+7.Get传参数
+	1.创建应用get_post_method, 具体方法参考方法5.
+	2.创建文件夹get_post_html
+		-添加文件夹方法参考方法一
+		-编写传参页面search_form.html
+	2.编写接收函数get_post_method/search.py
+		-search方法接收get参数
+		-search_form调用页面
+	3.修改private_project/url
+
+8.Post传参数
+	1.首先修改private_project/settings中MIDDLEWARE_CLASSES
+		-添加'django.middleware.csrf.CsrfViewMiddleware',
+		-防止跨域请求限制'CSRF cookie not set'
+	2.在方法7的基础上
+		-添加get_post_html/post.html
+		-添加get_post_method/search_post.py
+	3.修改private_project/url

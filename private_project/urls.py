@@ -21,6 +21,10 @@ from private_project.view_templates import temp1, temp2
 import appTest.models 
 import settings
 import JSorCSS
+import get_post_method.search
+import get_post_method.search_post
+
+
 urlpatterns = [
     url(r"^$", hello),
     url(r'^cafe/', cafe),
@@ -30,5 +34,12 @@ urlpatterns = [
     url(r'^js/', JSorCSS.models.JS_View),
     url(r'^css/',JSorCSS.models.CSS_View),
     url(r'^admin/', admin.site.urls),
+    # setting the get method
+    url(r'^searchform/', get_post_method.search.search_form),
+    url(r'^search/', get_post_method.search.search),
+    # setting the post method
+    url(r'^search_form_post/', get_post_method.search_post.search_form),
+    url(r'^search-post/', get_post_method.search_post.search_post),
+    # setting the css and js static method
     url( r'^static/(?P<path>.*)$', 'django.views.static.serve',{ 'document_root': settings.STATIC_URL }),
 ]
